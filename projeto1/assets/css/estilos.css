@@ -1,0 +1,143 @@
+@charset "utf-8";
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 300px;
+}
+header{
+    display: flex;
+    justify-content: center;
+    height: 120px;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    width: 990px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 170px;
+    height: 70px;
+}
+.menu{
+    display: flex;
+    align-items: center;
+}
+nav a{
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #727272;
+}
+nav .ativo, nav a:hover{
+    background-color: #39AAE1;
+    color: #fff;
+}
+#banner{
+    display: flex;
+    justify-content: center;
+    background-image: url(../images/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 670px;
+}
+#banner .container{
+    flex-direction: column;
+}
+.banner_headline{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+.banner_headline h1{
+    color: #fff;
+    font-size: 70px;
+    text-shadow: 0px 2px 0px #555;
+    max-width: 350px;
+}
+.banner_headline h2{
+    color: #fff;
+    font-size: 21px;
+    text-shadow: 0px 2px 0px #555;
+    max-width: 350px;
+}
+.banner_options{
+    display: flex;
+    height: 210px;
+}
+.banner1, .banner2, .banner3{
+    flex: 1;
+    padding: 20px;
+    color: #fff;
+}
+.banner1{
+    background-color: #39AAE1;
+}
+.banner2{
+    background-color: #0079C7;
+    
+}
+.banner3{
+    background-color: #2B4C99;
+}
+.banner_title{
+    font-size: 25px;
+}
+.banner_desc{
+    font-size: 17px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.banner_options a{
+    display: inline-block;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 13px;
+}
+.banner_options_hour{
+    font-size: 17px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 8px;
+}
+
+#geral{
+    display: flex;
+    justify-content: center;
+}
+#geral section{
+    flex: 2;
+}
+#geral aside{
+    flex:1;
+}
+
+.widget_title{
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+}
+.widget_title_text{
+    color: #000;
+    font-size: 21px;
+    font-weight: bold;
+}
+.widget_title_bar{
+    width: 50px;
+    height: 2px;
+    background-color: #36A9E1;
+    margin-top: 8px;
+}
