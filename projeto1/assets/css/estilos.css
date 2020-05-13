@@ -3,9 +3,11 @@
     margin: 0px;
     padding: 0px;
 }
+a{
+    text-decoration: none;
+}
 body{
     font-family: Arial, Helvetica, sans-serif;
-    padding-bottom: 300px;
 }
 header{
     display: flex;
@@ -29,11 +31,19 @@ header{
     display: flex;
     align-items: center;
 }
+nav ul, nav li{
+    list-style-type: none;
+}
+nav ul{
+    display: flex;
+}
 nav a{
+    display: block;
     padding: 15px;
     text-decoration: none;
     text-transform: uppercase;
     color: #727272;
+    
 }
 nav .ativo, nav a:hover{
     background-color: #39AAE1;
@@ -128,7 +138,6 @@ nav .ativo, nav a:hover{
 .widget_title{
     margin-top: 30px;
     margin-bottom: 20px;
-
 }
 .widget_title_text{
     color: #000;
@@ -140,4 +149,204 @@ nav .ativo, nav a:hover{
     height: 2px;
     background-color: #36A9E1;
     margin-top: 8px;
+}
+
+.widget_body{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+article{
+    flex: 1;
+    min-width: 300px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+article .news_data{
+    display: flex;
+}
+article .news_posted_at{
+    background-color: #2B4C99;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px;
+    margin-right: 2px;
+}
+article .news_comments{
+    background-color: #36A9E1;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px;
+}
+article .news_img{
+    margin-top: 30px;
+}
+article .news_img img{
+    width: 100%;
+    height: auto;
+}
+article .news_title{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 23px;
+    color: #000;
+}
+article .news_resume{
+    font-size: 14px;
+    color: #5c5c5c;
+    line-height: 20px;
+}
+
+.space-between{
+    justify-content: space-between;
+}
+.departments{
+    flex: 1;
+    width: 150px;
+    height: 150px;
+    background-color: #36A9E1;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+footer{
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: center;
+}
+footer .container{
+    flex-direction: column;
+}
+
+.footer-menu{
+    display: flex;
+}
+.footer-menu a{
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+.fm_1, .fm_2, .fm_3{
+    flex: 1;
+    font-size: 20px;
+}
+.fm_1{
+    background-color: #39AAE1;
+}
+.fm_2{
+    background-color: #0079C7;
+}
+.fm_3{
+    background-color: #2B4C99;
+}
+.footer-area{
+    display: flex;
+}
+.footer-area-item{
+    flex: 1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+}
+footer .widget_title_text{
+    color: #fff;
+}
+.footer-copy{
+    border-top: 1px solid #2c2c2c;
+    height: 40px;
+    line-height: 40px;
+    color: rgba(255, 255, 255, .3);
+    font-size: 12px;
+}
+
+.menu-mobile{
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 20px;
+}
+.menu-mobile:hover{
+    cursor: pointer;
+}
+.mm-line{
+    height: 3px;
+    background-color: #0079C7;
+}
+
+
+
+
+
+
+@media screen and (max-width: 600px){
+    .menu-mobile{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    #banner{
+        height: auto;
+    }
+    .banner_headline h1{
+        font-size: 55px;
+    }
+    .banner_headline h2{
+        font-size: 17px;
+    }
+    .banner_options{
+        height: auto;
+        flex-direction: column;
+    }
+    .banner_title{
+        font-size: 20px;
+    }
+    .banner_desc{
+        font-size: 15px;
+    }
+    .banner_options a{
+        font-size: 11px;
+    }
+    .banner_options_hour{
+        font-size: 15px;
+    }
+    .container{
+        flex-direction: column;
+    }
+    #geral section, #geral aside{
+        padding: 20px;
+    }
+    .footer-menu{
+        flex-direction: column;
+    }
+    .footer-area {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .footer-copy{
+        padding-left: 20px;
+    }
+    header .container{
+        flex-direction: row;
+    }
+    nav ul{
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+    }
+    header{
+        height: auto;
+    }
+    .logo{
+        padding: 20px;
+    }
 }
