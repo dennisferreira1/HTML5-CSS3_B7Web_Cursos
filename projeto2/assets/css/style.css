@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+/* Reset em todos os elementos */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+header{
+    height: 100px;
+    background-color: #000;
+    color: #fff;
+}
+.header{
+    max-width: 1140px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    width: 100px;
+}
+.logoImg{
+    width: 80px;
+    height: 80px;
+    background-color: #b28756;
+    border-radius: 100%;
+}
+.menu{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+.menu ul, .menu li{
+    list-style-type: none;
+}
+.menu ul{
+    display: flex;
+}
+.menu li a{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    height: 100px;
+    align-items: center;
+    border-bottom: 5px solid #000;
+}
+.menu li a:hover, .menu .ativo a{
+    border-bottom: 5px solid #b28756;
+    color: #ccc;
+}
+
+.banner{
+    height: calc(100vh - 100px);
+    background-color: #333;
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-position: bottom;
+    overflow: hidden;
+}
+.banner .sliders{
+    width: 1000vw;
+    height: 100%;
+}
+.banner .slide{
+    width: 100vw;
+    height: 100%;
+    display: inline-block;
+    background-color: rgba(0,0,0, .8);
+}
+.banner .slideArea{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.banner h1{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 50px;
+}
+.banner h1 span{
+    color: #b28756;
+}
+.banner h2{
+    text-transform: uppercase;
+    font-size: 17px;
+    margin-top: 20px;
+}
+.banner a{
+    background-color: #b28756;
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 30px;
+    border-radius: 20px;
+    padding: 10px 30px;
+}
+.banner a:hover{
+    background-color: #bb9973;
+}
+.banner .slidersPointers{
+    width: 100vw;
+    height: 20px;
+    position: absolute;
+    margin-top: -50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner .pointer{
+    width: 15px;
+    height: 15px;
+    border: 2px solid #b28756;
+    border-radius: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.banner .pointer:hover{
+    border: 2px solid #cab69f;
+}
+.banner .pointer.ativo{
+    background-color: #b28756;
+}
+
+
