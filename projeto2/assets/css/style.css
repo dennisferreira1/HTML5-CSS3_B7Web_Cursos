@@ -10,7 +10,27 @@
 body{
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-size: 13px;
+    overflow-x: hidden;
 }
+
+.button{
+    display: inline-block;
+    background-color: #b28756;
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 30px;
+    border-radius: 20px;
+    padding: 10px 30px;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: #bb9973;  
+}
+
+/* header */
 header{
     height: 100px;
     background-color: #000;
@@ -31,6 +51,9 @@ header{
     height: 80px;
     background-color: #b28756;
     border-radius: 100%;
+}
+.menuOpen{
+    display: none;
 }
 .menu{
     flex: 1;
@@ -60,6 +83,7 @@ header{
     color: #ccc;
 }
 
+/* sectionBanner */
 .banner{
     height: calc(100vh - 100px);
     background-color: #333;
@@ -99,20 +123,6 @@ header{
     font-size: 17px;
     margin-top: 20px;
 }
-.banner a{
-    background-color: #b28756;
-    color: #fff;
-    font-size: 12px;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 600;
-    margin-top: 30px;
-    border-radius: 20px;
-    padding: 10px 30px;
-}
-.banner a:hover{
-    background-color: #bb9973;
-}
 .banner .slidersPointers{
     width: 100vw;
     height: 20px;
@@ -138,4 +148,709 @@ header{
     background-color: #b28756;
 }
 
+/* sectionDefault */
+.default{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.default .sectionTitle, .default .sectionDesc{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.default .sectionTitle{
+    font-size: 27px;
+}
+.default .sectionDesc{
+    font-size: 12px;
+    color: #999;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.default .sectionBody{
+    max-width: 1140px;
+    margin: auto;
+}
+.default.light{
+    background-color: #f1f1f1;
+}
+.default.light .sectionTitle, .default.light .sectionBody {
+    color: #000;
+}
+.default.dark{
+    background-color: #000;
+}
+.default.dark .sectionTitle, .default.dark .sectionBody {
+    color: #fff;
+}
 
+footer{
+    background-color: #000;
+    padding: 20px;
+}
+.footerArea{
+    max-width:1140px;
+    margin:auto;
+    color:#FFF;
+    display:flex;
+}
+.footerItem{
+    flex: 1;
+}
+.footerSocial {
+    display:flex;
+}
+.footerSocial a {
+    display:block;
+    width:25px;
+    height:25px;
+    background-color:#333;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:13px;
+    margin-right:10px;
+}
+.footerSocial a:hover {
+    background-color:#B28756;
+}
+
+.footerItem.area2{
+    color:#999;
+    line-height:20px;
+    font-size:13px;
+    padding:0 10px 10px 10px;
+}
+
+.footerItem.area3 form{
+    background-color:#333;
+    text-align:center;
+    padding:30px;
+}
+.footerItem.area3 input {
+    width:100%;
+    height:40px;
+    border:0;
+    background:transparent;
+    border-bottom:1px solid #CCC;
+    outline:0;
+    color:#FFF;
+    font-size:14px;
+    text-align:center;
+}
+
+
+
+
+
+
+/* Formatação áreas específicas */
+
+/* ABOUT US */
+.aboutUS{
+    display: flex;
+}
+.aboutUS-left{
+    flex: 1;
+}
+.aboutUS-left p{
+    font-size: 14px;
+    line-height: 25px;
+}
+.aboutUS-rigth{
+    width: 520px;
+    text-align: center;
+}
+.aboutUS img{
+    width: 480px;
+    box-shadow: 5px 10px 20px #888;
+}
+
+/* sectionServices */
+.sectionServices{
+    display: flex;
+    text-align: center;
+}
+.sectionService{
+    flex: 1;
+    border-right: 1px solid #333;
+    padding: 20px;
+}
+.sectionService:first-child{
+    border-left: 1px solid #333;
+}
+.sectionService h4{
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.sectionService p{
+    margin-top: 10px;
+    font-size: 13px;
+    color: #999;
+}
+
+/* sectionProjects */
+.sectionProjects{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sectionProjects-filters{
+    border: 1px solid #ccc;
+    background-color: #eee;
+    border-radius: 25px;
+    display: inline-block;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.sectionProjects-filters ul, .sectionProjects-filters li{
+    list-style-type: none;
+}
+.sectionProjects-filters li{
+    display: inline-block;
+    padding: 20px;
+    text-transform: uppercase;
+    font-size: 13px;
+    border-left: 1px solid #ccc;
+    border-bottom: 5px solid #eee;
+    cursor: pointer;
+}
+.sectionProjects-filters li:hover, .sectionProjects-filters li.ativo {
+    border-bottom: 5px solid #b28756;
+}
+.sectionProjects-filters li:first-child{
+    border-left: none;
+}
+/* sectionProjects-photos */
+.sectionProjects-photos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
+    max-width: 1140px;
+    margin-top: 20px;
+}
+.sectionProjects-photo{
+    width: 280px;
+}
+.sectionProjects-photoArea{
+    margin: 10px;
+    width: 260px;
+    height: 160px;
+}
+.sectionProjects-photoArea img{
+    width: inherit;
+    height: inherit;
+}
+.sectionProjects-photoInfo{
+    position: absolute;
+    background-color: rgba(0,0,0,.7);
+    width: inherit;
+    height: inherit;
+    color: #fff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.sectionProjects-photoInfo h5{
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.sectionProjects-photoArea:hover .sectionProjects-photoInfo{
+    display: flex;
+}
+
+/* sectionTeam */
+.bgTime{
+    background-image: url(../images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 0;
+}
+.sectionTeamArea{
+    background-color: rgba(0,0,0, .8);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.sectionTeam{
+    overflow: hidden;
+    max-width: 1090px;
+    margin: auto;
+}
+.sectionTeam .sliders{
+    width: 1000vw;
+    height: 100%;
+}
+.sectionTeam .slide{
+    width: 350px;
+    height: 100%;
+    min-height: 430px;
+    display: inline-block;
+    background-color: #fff;
+    margin-right: 20px;
+}
+.sectionTeam .slideArea{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    padding: 30px;
+}
+.sectionTeamAvatar{
+    width: 150px;
+    height: auto;
+}
+.sectionTeamName{
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+.sectionTeamRole{
+    font-size: 14px;
+    color: #777;
+    margin-top: 5px;
+}
+.sectionTeamSocial{
+    display: flex;
+    margin-top: 30px;
+}
+.sectionTeamSocial a{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: #ccc;
+    margin-left: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.sectionTeamSocial a:hover{
+    background-color: #b28756;
+}
+
+.sectionTeamArea .slidersPointers{
+    height: 20px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sectionTeamArea .pointer{
+    width: 15px;
+    height: 15px;
+    border: 2px solid #b28756;
+    border-radius: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.sectionTeamArea .pointer:hover{
+    border: 2px solid #cab69f;
+}
+.sectionTeamArea .pointer.ativo{
+    background-color: #b28756;
+}
+
+
+/* sectionClients */
+.sectionClients{
+    overflow: hidden;
+    max-width: 880px;
+    margin: auto;
+}
+.sectionClients .sliders{
+    width: 1000vw;
+    height: 100%;
+}
+.sectionClients .slide{
+    width: 100vw;
+    height: 100%;
+    display: inline-flex;
+}
+.sectionClients .slideArea{
+    max-width: 880px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+}
+.sectionClients .sectionClientAvatar{
+    width: 140px;
+    height: auto;
+}
+.sectionClients .sectionClientName{
+    text-transform: capitalize;
+    font-size: 20px;
+    color: #000;
+    font-weight: bold;
+    margin-top: 30px;
+}
+.sectionClients .sectionClientDepartament{
+    font-size: 15px;
+    color: #111;
+    font-weight: 600;
+    margin-top: 8px;
+}
+.sectionClients .sectionClientComment{
+    font-size: 15px;
+    color: #777;
+    text-align: center;
+    line-height: 25px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.sectionClientComment span{
+    display: block;
+    font-size: 60px;
+    font-weight: 600;
+    padding-top: 30px;
+}
+.sectionClients .slidersPointers{
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sectionClients .pointer{
+    width: 15px;
+    height: 15px;
+    border: 2px solid #b28756;
+    border-radius: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.sectionClients .pointer:hover{
+    border: 2px solid #cab69f;
+}
+.sectionClients .pointer.ativo{
+    background-color: #b28756;
+}
+
+/* sectionCompanies */
+.sectionCompanies{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #fff;
+    padding: 50px 100px;
+}
+.sectionCompanies img{
+    padding: 30px;
+}
+
+/* sectionPrices */
+.sectionPrices{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.sectionPriceArea{
+    background-color: #fff;
+    min-width: 250px;
+    min-height: 340px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+.sectionPricePlan{
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 600;
+}
+.sectionPriceValue{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.sectionPriceValue span{
+    display: block;
+    font-size: 10px;
+    color: #777;
+    font-weight: 400;
+}
+.sectionPriceDesc{
+    text-align: center;
+    color: #777;
+}
+.sectionPriceArea .button{
+    background-color: #333;
+}
+.sectionPriceArea .button:hover{
+    background-color: #b28756;
+}
+
+/* sectionPremium */
+.default.light.white{
+    background-color: #fff;
+}
+.sectionPremium{
+    max-width: 1140px;
+    overflow: hidden;
+    margin: auto;
+}
+.sectionPremium .sliders{
+    width: 1000vw;
+    height: 100%;
+}
+.sectionPremium .slide{
+    max-width: 100vw;
+    height: 100%;
+    display: inline-flex;
+}
+.sectionPremium .slideArea{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.sectionPremium .slideArea-left{
+    width: 570px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.slideArea-left img{
+    height: 340px;
+}
+
+.sectionPremium .slideArea-rigth{
+    width: 470px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: 100px;
+}
+.slideArea-rigth .featuresArea{
+    display: inline-flex;
+    margin-bottom: 30px;
+
+}
+.slideArea-rigth .featuresImg{
+    margin-right: 30px;
+
+}
+.slideArea-rigth .featuresDesc{
+    color: #777;
+    line-height: 25px;
+}
+.slideArea-rigth .featuresDesc h3{
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #111;
+
+}
+.slideArea-rigth .featuresDesc .featuresDesc-list{
+    text-transform: uppercase;
+}
+.sectionPremium .slidersPointers{
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 35px;
+}
+.sectionPremium .pointer{
+    width: 15px;
+    height: 15px;
+    border: 2px solid #b28756;
+    border-radius: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.sectionPremium .pointer:hover{
+    border: 2px solid #cab69f;
+}
+.sectionPremium .pointer.ativo{
+    background-color: #b28756;
+}
+.sectionPremium-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* sectionFacts */
+.sectionFacts{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.sectionFact{
+    flex: 1;
+    padding: 20px;
+    min-width: 280px;
+}
+.sectionFact h3{
+    color: #b28756;
+    font-size: 45px;
+    font-weight: bold;
+}
+.sectionFact h4{
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.sectionFact p{
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #999;
+    line-height: 20px;
+}
+
+/* sectionSocial */
+.sectionSocial{
+    background-color: #fff;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    color: #999;
+    font-size: 15px;
+    font-weight: 600;
+}
+.sectionSocial .sectionSocial-share{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-right: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.sectionSocial .sectionSocial-share img{
+    margin-right: 15px;
+}
+.sectionSocial .sectionSocial-icon{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.sectionSocial-icon a{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+}
+.sectionSocial-icon div{
+    padding-left: 40px;
+}
+.sectionSocial-icon .twitter{
+    background-color: rgb(48, 161, 253);
+}
+.sectionSocial-icon .linkedin{
+    background-color: rgb(9, 119, 245);
+}
+.sectionSocial-icon .facebook{
+    background-color: rgb(12, 95, 248);
+}
+.sectionSocial-icon .google{
+    background-color: rgb(248, 45, 45);
+}
+.sectionSocial-icon .pinterest{
+    background-color: rgb(190, 2, 2);
+}
+
+/* sectionContact */
+.sectionContact{
+    max-width: 540px;
+    text-align: center;
+    margin: auto;
+}
+.formContact input[type=text], .formContact input[type=email], .formContact textarea{
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #aaa;
+    font-size: 17px;
+    margin-top: 30px;
+    outline: 0;
+}
+.formContact textarea{
+    border: 2px solid #aaa;
+    height: 100px;
+    resize: none;
+}
+.formContact .inline{
+    display: flex;
+   
+}
+.formContact .inline input:first-child{
+    margin-right: 20px;
+}
+.formContact input::placeholder, textarea::placeholder{
+    text-transform: uppercase;
+    color: #666;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* sectionMap */
+.sectionMap{
+    background-image: url(../images/mapa.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.sectionMap-area{
+    width: 100vw;
+    max-width: 1140px;
+    margin: auto;
+}
+.sectionMap-info{
+    width: 50%;
+    padding: 30px;
+    background-color: #fff;
+    color: #aaa;
+}
+.sectionMap-infoItem{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.sectionMap-infoItem-img{
+    width: 35px;
+    height: 35px;
+    background-color: #aaa;
+    border-radius: 100%;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
