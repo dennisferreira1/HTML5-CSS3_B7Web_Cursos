@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, minimun-scale=1.0, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        function openMenu(){
+            if(document.querySelector(".menu nav").style.display == "none"){
+                document.querySelector(".menu nav").style.display = "block"
+            }else{
+                document.querySelector(".menu nav").style.display = "none"
+            }
+        }
+    </script>
 </head>
 <body>
 
@@ -15,7 +24,7 @@
                 <div class="logoImg"></div>
             </div>
             <div class="menu">
-                <img src="assets/images/menu.png" class="menuOpen">
+                <img src="assets/images/menu.png" class="menuOpen" onclick="openMenu()">
                 <nav>
                     <ul>
                         <li class="ativo"><a href="">home</a></li>

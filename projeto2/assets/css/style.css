@@ -54,6 +54,7 @@ header{
 }
 .menuOpen{
     display: none;
+    cursor: pointer;
 }
 .menu{
     flex: 1;
@@ -927,5 +928,166 @@ footer{
     }
     .sectionMap-info{
         width: auto;
+    }
+}
+
+
+/* Estilos para smartphone */
+@media (max-width: 450px){
+    .logo{
+        margin-left: 30px;
+    }
+    .menuOpen{
+        display: block;
+        width: 45px;
+        margin-right: 30px;
+    }
+    .menu nav{
+        display: none;
+        position: absolute;
+        z-index: 99;
+        background-color: rgba(0,0,0,0.9);
+        width: 80vw;
+        height: calc(100vh - 100px);
+        top: 100px;
+        right: 0;
+    }
+    .menu ul{
+        flex-direction: column;
+    }
+    .menu li a {
+        font-weight: bold;
+        height: 40px;
+        font-size: 20px;
+        margin-left: 30px;
+        border: 0;
+    }
+    .menu li a:hover, .menu .ativo a{
+        border: 0;
+        color: #b28756;
+    }
+
+    .slideArea h1{
+        font-size: 30px;
+    }
+    .slideArea h2{
+        font-size: 17px;
+    }
+
+    .aboutUS{
+        flex-direction: column;
+    }
+    .aboutUS-left{
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .aboutUS-rigth{
+        width: auto;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .aboutUS img{
+        width: 100%;
+    }
+
+    .sectionServices{
+        flex-wrap: wrap;
+    }
+    .sectionService{
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .sectionProjects-filters{
+        width: 80vw;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .sectionProjects-filters ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .sectionProjects-filters li{
+        flex: 1;
+        text-align: center;
+        padding: 10px;
+        border-left: 0;
+        border-right: 0;
+    }
+    .sectionProjects-photo{
+        width: 320px;
+    }
+    .sectionProjects-photoArea {
+        width: 300px;
+        height: 200px;
+    }
+
+    .sectionTeam{
+        max-width: 350px;
+    }
+
+    .sectionPriceArea{
+        min-width: 350px;
+    }
+    .sectionPremium .slideArea{
+        display: block;
+    }
+
+    .sectionPremium .slideArea-left{
+        width: 100vw;
+        height: 300px;
+    }
+    .slideArea-left img{
+        width: auto;
+        height: 280px;
+    }
+    .slideArea-rigth .featuresDesc p{
+        width: 300px;
+    }
+
+    .formContact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .formContact .inline{
+        display: block;
+        width: 90%;
+    }
+    .formContact input[type=text], .formContact textarea{
+        width: 90%;
+    }
+    .formContact input[name=nName]{
+        width: 100%;
+    }
+    .formContact input[type=email]{
+        width: 100%;
+    }
+
+    .sectionMap-area{
+        width: auto;
+        padding: 30px;
+    }
+    .sectionMap-info{
+        width: auto;
+    }
+
+    .footerArea{
+        display: block;
+    }
+    .footerItem{
+        margin-top: 20px;
+    }
+    .footerSocial{
+        justify-content: center;
+        align-items: center;
+    }
+    .footerSocial a{
+       width: 45px;
+       height: 45px;
+       border-radius: 100%;
     }
 }
